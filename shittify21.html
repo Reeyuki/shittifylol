@@ -3,19 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <title>Shittify</title>
-    <base href="https://gcore.jsdelivr.net/gh/SomeRandomFella/shittifylol/" />
+    <base href="https://gcore.jsdelivr.net/gh/Reeyuki/shittifylol/" />
     <link rel="icon" type="image/png" href="logo.png" />
     <style>
       @font-face {
         font-family: "Spotify Mix";
-        src: url("https://gcore.jsdelivr.net/gh/SomeRandomFella/shittifylol/font/SpotifyMix-Regular.woff2")
+        src: url("https://gcore.jsdelivr.net/gh/Reeyuki/shittifylol/font/SpotifyMix-Regular.woff2")
           format("woff2");
         font-weight: 400;
         font-style: normal;
       }
+
       @font-face {
         font-family: "Spotify Mix";
-        src: url("https://gcore.jsdelivr.net/gh/SomeRandomFella/shittifylol/font/SpotifyMix-Bold.woff2")
+        src: url("https://gcore.jsdelivr.net/gh/Reeyuki/shittifylol/font/SpotifyMix-Bold.woff2")
           format("woff2");
         font-weight: 700;
         font-style: normal;
@@ -28,23 +29,28 @@
         display: flex;
         flex-direction: column;
       }
+
       body {
         background-color: rgb(8, 8, 8);
       }
+
       header {
         display: flex;
         justify-content: space-between;
         align-items: center;
       }
+
       .logo {
         height: 42px;
         width: 42px;
       }
+
       .middle-shit {
         display: flex;
         align-items: center;
         gap: 5px;
       }
+
       .home-button {
         display: flex;
         align-items: center;
@@ -56,15 +62,18 @@
         cursor: pointer;
         transition: all ease 0.3s;
       }
+
       .home-button:hover {
         transform: scale(1.02);
         background-color: #2c2c2c;
       }
+
       .home-icon {
         fill: white;
         height: 24px;
         width: 24px;
       }
+
       .search-area {
         display: flex;
         align-items: center;
@@ -75,11 +84,13 @@
         min-width: 350px;
         max-width: 400px;
       }
+
       .search-icon {
         fill: rgb(211, 211, 211);
         height: 24px;
         width: 24px;
       }
+
       .search-bar {
         background-color: transparent;
         border: none;
@@ -88,9 +99,11 @@
         font-size: 17px;
         width: 100%;
       }
+
       .search-bar:focus {
         outline: none;
       }
+
       main {
         display: flex;
         gap: 10px;
@@ -98,6 +111,7 @@
         min-height: 0;
         padding-bottom: 10px;
       }
+
       .your-library {
         background-color: #121212;
         color: white;
@@ -105,16 +119,17 @@
         border-radius: 15px;
         padding: 7px;
         min-width: 0;
-        flex: 0 0 495px;
         overflow: auto;
         width: 30%;
       }
+
       .top-thingy {
         display: flex;
         justify-content: space-between;
         align-items: center;
         margin-bottom: 20px;
       }
+
       .create {
         display: flex;
         align-items: center;
@@ -129,14 +144,17 @@
         cursor: pointer;
         transition: all ease 0.3s;
       }
+
       .create:hover {
         background-color: #2c2c2c;
       }
+
       .add {
         fill: white;
         height: 16px;
         width: 16px;
       }
+
       .red-stuff {
         background: linear-gradient(
           to bottom,
@@ -145,6 +163,7 @@
           #121212 100%
         ) !important;
       }
+
       .songs-stuff {
         flex: 1;
         min-width: 0;
@@ -162,21 +181,25 @@
         padding-top: 17px;
         padding-left: 25px;
       }
+
       .cat-row {
         min-width: 0;
         overflow-x: scroll;
         scrollbar-width: none;
         -ms-overflow-style: none;
       }
+
       .cat-row::-webkit-scrollbar {
         display: none;
       }
+
       .cards-wrapper {
         display: flex;
         align-items: center;
         gap: 6px;
         position: relative;
       }
+
       .arrow-btn {
         display: flex;
         align-items: center;
@@ -193,19 +216,23 @@
           opacity 0.2s ease;
         padding: 0;
       }
+
       .arrow-btn svg {
         fill: white;
         width: 20px;
         height: 20px;
         flex-shrink: 0;
       }
+
       .arrow-btn:hover:not(:disabled) {
         background-color: #3a3a3a;
       }
+
       .arrow-btn:disabled {
         opacity: 0.2;
         cursor: default;
       }
+
       .cards {
         display: grid;
         grid-auto-flow: column;
@@ -218,18 +245,22 @@
         flex: 1;
         min-width: 0;
       }
+
       .cards::-webkit-scrollbar {
         display: none;
       }
+
       .cat-title {
         font-size: 1.5rem;
       }
+
       .cat-top {
         display: flex;
         justify-content: space-between;
         align-items: center;
         margin-right: 25px;
       }
+
       .cat-top p {
         color: rgb(182, 182, 182);
         font-size: 14px;
@@ -237,9 +268,11 @@
         cursor: pointer;
         transition: all ease 0.3s;
       }
+
       .cat-top p:hover {
         text-decoration: underline;
       }
+
       .card {
         width: 171.5px;
         word-wrap: break-word;
@@ -251,15 +284,18 @@
         border-radius: 5px;
         transition: all ease 0.3s;
       }
+
       .card:hover {
         background-color: #1f1f1f;
       }
+
       .title {
         width: 171.5px;
         height: 171.5px;
         border-radius: 5px;
         object-fit: cover;
       }
+
       .song-name {
         font-weight: bold;
         margin-top: 2px;
@@ -269,6 +305,7 @@
         text-overflow: ellipsis;
         max-width: 151.5px;
       }
+
       .artist-name {
         color: rgb(182, 182, 182);
         font-size: 14px;
@@ -278,25 +315,31 @@
         text-overflow: ellipsis;
         max-width: 151.5px;
       }
+
       .artist {
         border-radius: 50%;
         width: 171.5px;
         height: 171.5px;
       }
+
       ::-webkit-scrollbar {
         width: 8px;
         height: 8px;
       }
+
       ::-webkit-scrollbar-track {
         background: #121212;
       }
+
       ::-webkit-scrollbar-thumb {
         background: #3a3a3a;
         border-radius: 2px;
       }
+
       ::-webkit-scrollbar-thumb:hover {
         background: #5a5a5a;
       }
+
       .song-player {
         display: flex;
         align-items: center;
@@ -305,17 +348,20 @@
         color: white;
         padding: 0 20px;
       }
+
       .far-left {
         display: flex;
         align-items: center;
         gap: 15px;
       }
+
       .player-img {
         width: 60px;
         height: 60px;
         border-radius: 5px;
         object-fit: cover;
       }
+
       .player-song-name {
         font-weight: bold;
         margin: 0;
@@ -324,15 +370,18 @@
         text-overflow: ellipsis;
         max-width: 180px;
       }
+
       .player-artist-name {
         color: rgb(182, 182, 182);
         font-size: 14px;
         margin: 0;
       }
+
       .player-artist-name:hover {
         text-decoration: underline;
         cursor: pointer;
       }
+
       .player-play {
         display: flex;
         align-items: center;
@@ -346,57 +395,68 @@
         cursor: pointer;
         transition: all ease 0.3s;
       }
+
       .play-icon {
         fill: black;
         height: 16px;
         width: 16px;
       }
+
       .centrist {
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
       }
+
       .controls {
         display: flex;
         align-items: center;
         gap: 6px;
       }
+
       .back-icon {
         fill: rgb(136, 136, 136);
         height: 16px;
         width: 16px;
       }
+
       .next-icon {
         fill: rgb(136, 136, 136);
         height: 16px;
         width: 16px;
       }
+
       .loop-icon {
         fill: rgb(136, 136, 136);
         height: 16px;
         width: 16px;
       }
+
       .bs-icon {
         fill: rgb(136, 136, 136);
         height: 16px;
         width: 16px;
       }
+
       .close-icon {
         fill: rgb(136, 136, 136);
         height: 16px;
         width: 16px;
       }
+
       .pause-icon {
         fill: rgb(136, 136, 136);
         height: 16px;
         width: 16px;
       }
+
       .add-icon {
         fill: rgb(136, 136, 136);
         height: 32px;
         width: 32px;
       }
+
       .player-back,
       .player-next,
       .loop,
@@ -415,6 +475,7 @@
         cursor: pointer;
         transition: all ease 0.2s;
       }
+
       .back-icon:hover,
       .next-icon:hover,
       .loop-icon:hover,
@@ -423,17 +484,20 @@
       .pause-icon:hover {
         fill: #aaaaaa;
       }
+
       .song-progress {
         display: flex;
         align-items: center;
         gap: 10px;
         margin-top: 5px;
       }
+
       .progression {
         font-size: 12px;
         color: rgb(182, 182, 182);
         margin: 0;
       }
+
       progress {
         width: 400px;
         height: 4px;
@@ -443,19 +507,24 @@
         border-radius: 2px;
         transition: height 0.15s ease;
       }
+
       progress:hover {
         height: 6px;
       }
+
       progress::-webkit-progress-value {
         background: #ffffff;
       }
+
       progress::-webkit-progress-bar {
         background: #464646;
       }
+
       .top-player-info {
         display: flex;
         gap: 20px;
       }
+
       .big-cover {
         width: 232px;
         height: 232px;
@@ -463,6 +532,7 @@
         object-fit: cover;
         flex-shrink: 0;
       }
+
       .huge-title {
         font-size: 6rem;
         margin: 0;
@@ -472,37 +542,45 @@
         -webkit-box-orient: vertical;
         word-break: break-word;
       }
+
       .huge-title.long-title {
         font-size: 3.5rem;
       }
+
       .huge-title.very-long-title {
         font-size: 2.2rem;
       }
+
       .artist-clicky {
         opacity: 0.6;
         margin-left: 10px;
       }
+
       .artist-clicky:hover {
         text-decoration: underline;
         cursor: pointer;
       }
+
       .play-icon-but-cool {
         fill: #070505;
         height: 24px;
         width: 24px;
       }
+
       .play-options {
         display: flex;
         align-items: center;
         gap: 15px;
         margin-top: 25px;
       }
+
       .add-to-album {
         display: flex;
         align-items: center;
         justify-content: center;
         gap: 15px;
       }
+
       .add-to-album-big {
         display: flex;
         align-items: center;
@@ -513,6 +591,7 @@
         height: 64px;
         cursor: pointer;
       }
+
       .big-play {
         display: flex;
         justify-content: center;
@@ -528,14 +607,17 @@
           transform 0.3s ease,
           background-color 0.2s ease;
       }
+
       .big-play:hover {
         transform: scale(1.05);
         background-color: #d30f0f;
       }
+
       .songs-in-album {
         display: flex;
         flex-direction: column;
       }
+
       .album-header {
         display: flex;
         gap: 20px;
@@ -545,9 +627,11 @@
         opacity: 0.6;
         border-bottom: rgba(255, 255, 255, 0.6) solid 1px;
       }
+
       .songs-place2 {
         margin-right: 20px;
       }
+
       .song56 {
         display: flex;
         align-items: center;
@@ -557,9 +641,11 @@
         border-radius: 4px;
         cursor: pointer;
       }
+
       .song56:hover {
         background-color: #292929;
       }
+
       .song56-left {
         display: flex;
         gap: 20px;
@@ -567,10 +653,12 @@
         flex: 1;
         overflow: hidden;
       }
+
       .song-number {
         opacity: 0.6;
         flex-shrink: 0;
       }
+
       .song-title-small {
         display: flex;
         align-items: center;
@@ -579,6 +667,7 @@
         text-overflow: ellipsis;
         margin: 0;
       }
+
       .playlist-item {
         display: flex;
         align-items: center;
@@ -589,12 +678,15 @@
         transition: background-color ease 0.2s;
         position: relative;
       }
+
       .playlist-item:hover {
         background-color: #1f1f1f;
       }
+
       .playlist-item:hover .playlist-actions {
         opacity: 1;
       }
+
       .playlist-actions {
         display: flex;
         gap: 4px;
@@ -603,6 +695,7 @@
         margin-left: auto;
         flex-shrink: 0;
       }
+
       .playlist-action-btn {
         background: transparent;
         border: none;
@@ -614,17 +707,21 @@
         justify-content: center;
         transition: background 0.15s;
       }
+
       .playlist-action-btn:hover {
         background: #3a3a3a;
       }
+
       .playlist-action-btn svg {
         fill: rgb(182, 182, 182);
         width: 15px;
         height: 15px;
       }
+
       .playlist-action-btn:hover svg {
         fill: white;
       }
+
       .playlist-cover {
         width: 48px;
         height: 48px;
@@ -636,6 +733,7 @@
         flex-shrink: 0;
         overflow: hidden;
       }
+
       .playlist-cover-grid {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -645,28 +743,33 @@
         overflow: hidden;
         flex-shrink: 0;
       }
+
       .playlist-cover-grid img {
         width: 100%;
         height: 100%;
         object-fit: cover;
       }
+
       .playlist-cover img {
         width: 100%;
         height: 100%;
         object-fit: cover;
         border-radius: 4px;
       }
+
       .playlist-cover-empty-icon {
         fill: #888;
         width: 22px;
         height: 22px;
       }
+
       .playlist-info {
         display: flex;
         flex-direction: column;
         min-width: 0;
         flex: 1;
       }
+
       .playlist-name {
         font-weight: bold;
         font-size: 15px;
@@ -675,12 +778,14 @@
         text-overflow: ellipsis;
         margin: 0;
       }
+
       .playlist-count {
         font-size: 13px;
         color: rgb(182, 182, 182);
         margin: 0;
         margin-top: 2px;
       }
+
       .modal-overlay {
         position: fixed;
         inset: 0;
@@ -690,6 +795,7 @@
         justify-content: center;
         z-index: 999;
       }
+
       .modal-box {
         background-color: #242424;
         border-radius: 12px;
@@ -701,10 +807,12 @@
         font-family: "Spotify Mix";
         color: white;
       }
+
       .modal-box h2 {
         margin: 0;
         font-size: 1.3rem;
       }
+
       .modal-input {
         background-color: #3a3a3a;
         border: none;
@@ -717,14 +825,17 @@
         width: 100%;
         box-sizing: border-box;
       }
+
       .modal-input:focus {
         background-color: #444;
       }
+
       .modal-actions {
         display: flex;
         justify-content: flex-end;
         gap: 10px;
       }
+
       .modal-cancel {
         background-color: transparent;
         border: none;
@@ -736,9 +847,11 @@
         border-radius: 50px;
         transition: color ease 0.2s;
       }
+
       .modal-cancel:hover {
         color: white;
       }
+
       .modal-confirm {
         background-color: white;
         border: none;
@@ -751,9 +864,11 @@
         border-radius: 50px;
         transition: background-color ease 0.2s;
       }
+
       .modal-confirm:hover {
         background-color: #ddd;
       }
+
       .modal-confirm-danger {
         background-color: #b60d0d;
         border: none;
@@ -766,9 +881,11 @@
         border-radius: 50px;
         transition: background-color ease 0.2s;
       }
+
       .modal-confirm-danger:hover {
         background-color: #d30f0f;
       }
+
       .add-song-modal-list {
         max-height: 300px;
         overflow-y: auto;
@@ -776,6 +893,7 @@
         flex-direction: column;
         gap: 4px;
       }
+
       .add-song-modal-item {
         display: flex;
         align-items: center;
@@ -785,20 +903,24 @@
         cursor: pointer;
         transition: background-color ease 0.2s;
       }
+
       .add-song-modal-item:hover {
         background-color: #3a3a3a;
       }
+
       .add-song-modal-item img {
         width: 40px;
         height: 40px;
         border-radius: 4px;
         object-fit: cover;
       }
+
       .add-song-modal-item-info {
         display: flex;
         flex-direction: column;
         min-width: 0;
       }
+
       .add-song-modal-item-title {
         font-weight: bold;
         font-size: 14px;
@@ -806,15 +928,18 @@
         overflow: hidden;
         text-overflow: ellipsis;
       }
+
       .add-song-modal-item-artist {
         font-size: 12px;
         color: rgb(182, 182, 182);
       }
+
       .add-song-modal-item.already-added {
         opacity: 0.4;
         cursor: default;
         pointer-events: none;
       }
+
       .playlist-big-cover {
         width: 232px;
         height: 232px;
@@ -826,6 +951,7 @@
         justify-content: center;
         flex-shrink: 0;
       }
+
       .playlist-big-cover-grid {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -836,16 +962,19 @@
         overflow: hidden;
         flex-shrink: 0;
       }
+
       .playlist-big-cover-grid img {
         width: 100%;
         height: 100%;
         object-fit: cover;
       }
+
       .playlist-empty-icon-big {
         fill: #555;
         width: 64px;
         height: 64px;
       }
+
       .add-to-album {
         display: flex;
         align-items: center;
@@ -858,9 +987,11 @@
         cursor: pointer;
         transition: all ease 0.2s;
       }
+
       .add-to-album .add-icon:hover {
         fill: #aaaaaa;
       }
+
       .show-all-grid {
         display: grid;
         grid-template-columns: repeat(auto-fill, 171.5px);
@@ -868,23 +999,27 @@
         padding-right: 25px;
         padding-bottom: 20px;
       }
+
       .artist-page-header {
         display: flex;
         flex-direction: column;
         gap: 8px;
         padding-right: 25px;
       }
+
       .artist-page-img {
         width: 180px;
         height: 180px;
         border-radius: 50%;
         object-fit: cover;
       }
+
       .artist-page-name {
         font-size: 5rem;
         font-weight: bold;
         margin: 0;
       }
+
       .search-results-grid {
         display: grid;
         grid-template-columns: repeat(auto-fill, 171.5px);
@@ -892,6 +1027,7 @@
         padding-right: 25px;
         padding-bottom: 20px;
       }
+
       .upload-btn {
         display: flex;
         align-items: center;
@@ -907,9 +1043,11 @@
         transition: all ease 0.3s;
         font-size: 14px;
       }
+
       .upload-btn:hover {
         background-color: #2c2c2c;
       }
+
       .feedback-btn {
         display: flex;
         align-items: center;
@@ -925,21 +1063,26 @@
         transition: all ease 0.3s;
         font-size: 14px;
       }
+
       .feedback-btn:hover {
         background-color: #2c2c2c;
       }
+
       .artist-clicky-link {
         opacity: 0.6;
         cursor: pointer;
       }
+
       .artist-clicky-link:hover {
         text-decoration: underline;
         opacity: 0.9;
       }
+
       .feedback-tabs {
         display: flex;
         gap: 8px;
       }
+
       .feedback-tab {
         flex: 1;
         padding: 8px 12px;
@@ -952,15 +1095,18 @@
         cursor: pointer;
         transition: all 0.2s;
       }
+
       .feedback-tab.active {
         border-color: white;
         color: white;
         background: #2c2c2c;
       }
+
       .feedback-tab:hover:not(.active) {
         border-color: #666;
         color: #ccc;
       }
+
       .feedback-textarea {
         background-color: #3a3a3a;
         border: none;
@@ -975,9 +1121,11 @@
         resize: vertical;
         min-height: 100px;
       }
+
       .feedback-textarea:focus {
         background-color: #444;
       }
+
       .feedback-song-input {
         background-color: #3a3a3a;
         border: none;
@@ -990,14 +1138,17 @@
         width: 100%;
         box-sizing: border-box;
       }
+
       .feedback-song-input:focus {
         background-color: #444;
       }
+
       .feedback-label {
         font-size: 13px;
         color: rgb(182, 182, 182);
         margin: 0;
       }
+
       #splash {
         position: fixed;
         inset: 0;
@@ -1011,13 +1162,16 @@
         transition: opacity 0.6s ease;
         pointer-events: none;
       }
+
       #splash.fade-out {
         opacity: 0;
       }
+
       #splash img {
         height: 52px;
         width: 52px;
       }
+
       #splash span {
         font-family: "Spotify Mix";
         font-size: 3rem;
@@ -1027,6 +1181,7 @@
       }
     </style>
   </head>
+
   <body>
     <header>
       <img src="logo.png" class="logo" />
@@ -1237,10 +1392,6 @@
       let allAlbumsFull = [];
       let allUploaded = [];
       let db;
-
-      alert(
-        "HEY!!! THIS IS IN VERY EARLY BETA, THERE ARENT MANY SONGS/ALBUMS RECCOMEND ME SOME TO ADD IN ISSUES AND REQUESTS IN THE TOP RIGHT, ALSO NOT VERY SIMILAR TO SPOTIFY AS ION USE IT. BTW loading songs on first load will take a while BE PATIENT have fun",
-      );
 
       window.addEventListener("load", () => {
         const splash = document.getElementById("splash");
@@ -1706,7 +1857,7 @@
 
       async function fetchMetaStuff() {
         const res = await fetch(
-          "https://gcore.jsdelivr.net/gh/SomeRandomFella/shittifylol/meta.json",
+          "https://gcore.jsdelivr.net/gh/Reeyuki/shittifylol/meta.json",
           { cache: "no-store" },
         );
 
@@ -1761,7 +1912,6 @@
       }
 
       document.getElementById("upload-btn").addEventListener("click", () => {
-        alert("these uploaded songs ONLY appear for u");
         document.getElementById("file-input").click();
       });
 
