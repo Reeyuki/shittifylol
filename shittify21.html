@@ -1871,6 +1871,7 @@
 
       async function loadUploaded() {
         const rows = await dbGetAll();
+        rows.forEach(r => { delete r.uploadedBlob; });
         allUploaded = rows;
         renderUploadedCards();
       }
@@ -2587,6 +2588,7 @@
         if (song.uploadedData) {
           const blob = new Blob([song.uploadedData], { type: "audio/mpeg" });
           const url = URL.createObjectURL(blob);
+          song.uploadedBlob = url;
           const audio = new Audio(url);
           songUI(audio, song);
           return;
